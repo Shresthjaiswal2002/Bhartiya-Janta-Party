@@ -1,0 +1,1692 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
+
+:root{
+    --green:#e1761e;
+    --black:#192a56;
+    --light-color:#666;
+    --box-shadow:0 .5rem 1.5rem rgba(0,0,0,.1);
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border:none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 5.5rem;
+    scroll-behavior: smooth;
+}
+
+/* section{
+    padding:2rem 9%;
+} */
+.dishes{
+    padding:2rem 9%;
+}
+.about{
+    padding:2rem 9%;
+}
+.menu{
+    padding:2rem 9%;
+}
+.review{
+    padding:2rem 9%;
+}
+
+
+section:nth-child(even){
+    background:#eee;
+}
+
+.sub-heading{
+    text-align: center;
+    color:var(--green);
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+.heading{
+    text-align: center;
+    color:var(--black);
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    color:#fff;
+    background: var(--black);
+    border-radius: .5rem;
+    cursor: pointer;
+    padding:.8rem 3rem;
+}
+
+.btn:hover{
+    background: var(--green);
+    letter-spacing: .1rem;
+}
+
+header{
+    position: fixed;
+    top:0; left: 0; right:0;
+    background: #1C1F34;
+    padding:1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: var(--box-shadow);
+    color: wheat;
+}
+
+header .logo{
+    color:var(--black);
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+
+header .logo i{
+    color:var(--green);
+}
+
+header .navbar a{
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    padding:.5rem 1.5rem;
+    color:var(--light-color);
+}
+
+header .navbar a.active,
+header .navbar a:hover{
+    color:#fff;
+    background: var(--green);
+}
+
+header .icons i,
+header .icons a{
+    cursor: pointer;
+    margin-left: .5rem;
+    height:4.5rem;
+    line-height: 4.5rem;
+    width:4.5rem;
+    text-align: center;
+    font-size: 1.7rem;
+    color:var(--black);
+    border-radius: 50%;
+    background: #eee;
+}
+
+header .icons i:hover,
+header .icons a:hover{
+    color:#fff;
+    background: var(--green);
+    transform: rotate(360deg);
+}
+
+header .icons #menu-bars{
+    display: none;
+}
+
+#search-form{
+    position: fixed;
+    top:-110%; left:0; 
+    height:100%; width:100%;
+    z-index: 1004;
+    background:rgba(0,0,0,.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:0 1rem;
+}
+
+#search-form.active{
+    top:0;
+}
+
+#search-form #search-box{
+    width:50rem;
+    border-bottom: .1rem solid #fff;
+    padding:1rem 0;
+    color:#fff;
+    font-size: 3rem;
+    text-transform: none;
+    background:none;
+}
+
+#search-form #search-box::placeholder{
+    color:#eee;
+}
+
+#search-form #search-box::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+}
+
+#search-form label{
+    color:#fff;
+    cursor:pointer;
+    font-size: 3rem;
+}
+
+#search-form label:hover{
+    color:var(--green);
+}
+
+#search-form #close{
+    position: absolute;
+    color:#fff;
+    cursor: pointer;
+    top: 2rem; right:3rem;
+    font-size: 5rem;
+}
+
+.home .home-slider .slide{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:2rem; 
+    padding-top: 9rem;
+    width: 100%;
+}
+
+.home .home-slider .slide .content{
+    flex:1 1 45rem;
+    width: 100%;
+}
+
+.home .home-slider .slide .image1{
+    flex:1 1 auto;
+    width: 100%;
+    height: auto;
+    margin-left:auto;
+    object-fit: cover;
+}
+
+.home .home-slider .slide .image1 img{
+    width: 100%;
+    height: auto;
+    margin-left: auto;
+
+}
+.home .home-slider {
+    padding: 0; /* Make sure there's no padding or margin on the parent containers */
+}
+
+
+.home .home-slider .slide .content span{
+    color:var(--green);
+    font-size: 2.5rem;
+}
+
+.home .home-slider .slide .content h3{
+    color:var(--black);
+    font-size: 7rem;
+}
+
+.home .home-slider .slide .content p{
+    color:var(--light-color);
+    font-size: 2.2rem;
+    padding:.5rem 0;
+    line-height: 1.5;
+}
+
+.swiper-pagination-bullet-active{
+    background:var(--green);
+}
+
+.dishes .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    gap:1.5rem;
+}
+
+.dishes .box-container .box{
+    padding:2.5rem;
+    background:#fff;
+    border-radius: .5rem;
+    border:.1rem solid rgba(0,0,0,.2);
+    box-shadow: var(--box-shadow);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.dishes .box-container .box .fa-heart,
+.dishes .box-container .box .fa-eye{
+    position: absolute;
+    top:1.5rem;
+    background:#eee;
+    border-radius: 50%;
+    height: 5rem;
+    width:5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color:var(--black);
+}
+
+.dishes .box-container .box .fa-heart:hover,
+.dishes .box-container .box .fa-eye:hover{
+    background: var(--green);
+    color:#fff;
+}
+
+.dishes .box-container .box .fa-heart{
+    right:-15rem;
+}
+
+.dishes .box-container .box .fa-eye{
+    left:-15rem;
+}
+
+.dishes .box-container .box:hover .fa-heart{
+    right:1.5rem;
+}
+
+.dishes .box-container .box:hover .fa-eye{
+    left:1.5rem;
+}
+
+.dishes .box-container .box img{
+    height:17rem;
+    margin:1rem 0;
+}
+
+.dishes .box-container .box h3{
+    color:var(--black);
+    font-size: 2.5rem;
+}
+
+.dishes .box-container .box .stars{
+    padding:1rem 0;
+}
+
+.dishes .box-container .box .stars i{
+    font-size: 1.7rem;
+    color:var(--green);
+}
+
+.dishes .box-container .box span{
+    color:var(--green);
+    font-weight: bolder;
+    margin-right: 1rem;
+    font-size: 2.5rem;
+}
+
+.about .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1.5rem;
+    align-items: center;
+}
+
+.about .row .image{
+    flex:1 1 45rem;
+}
+
+.about .row .image img{ 
+    width: 100%;
+}
+
+.about .row .content{
+    flex:1 1 45rem;
+}
+.content{
+    text-align: justify;
+}
+.about .row .content h3{
+    color:var(--black);
+    font-size: 4rem;
+    padding:.5rem 0;
+}
+
+.about .row .content p{
+    color:var(--light-color);
+    font-size: 1.5rem;
+    padding:.5rem 0;
+    line-height: 2;
+}
+
+.about .row .content .icons-container{
+    display: flex;
+    gap:1rem;
+    flex-wrap: wrap;
+    padding:1rem 0;
+    margin-top: .5rem;
+}
+
+.about .row .content .icons-container .icons{
+    background:#eee;
+    border-radius: .5rem;
+    border:.1rem solid rgba(0,0,0,.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+    flex:1 1 17rem;
+    padding:1.5rem 1rem;
+}
+
+.about .row .content .icons-container .icons i{
+    font-size: 2.5rem;
+    color:var(--green);
+}
+
+.about .row .content .icons-container .icons span{
+    font-size: 1.5rem;
+    color:var(--black);
+}
+
+.menu .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap:1.5rem;
+}
+
+.menu .box-container .box{
+    background: #fff;
+    border:.1rem solid rgba(0,0,0,.2);
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);    
+}
+
+.menu .box-container .box .image{
+    height: 25rem;
+    width: 100%;
+    padding:1.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.menu .box-container .box .image img{
+    height: 100%;
+    width: 100%;
+    border-radius: .5rem;
+    object-fit: cover;
+}
+
+.menu .box-container .box .image .fa-heart{
+    position: absolute;
+    top:2.5rem; right: 2.5rem;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    background: #fff;
+    border-radius: 50%;
+    color:var(--black);
+}
+.menu .box-container .box .image .fa-eye{
+    position: absolute;
+    top:2.5rem; left: -5.5rem;
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    background: #eee;
+    border-radius: 50%;
+    color:var(--black);
+}
+.menu .box-container .box .image .fa-heart:hover{
+    background-color: var(--green);
+    color:#fff;
+}
+.menu .box-container .box .image .fa-eye:hover{
+    background-color: var(--green);
+    color:#fff;
+}
+.menu .box-container .box:hover .fa-eye{
+    left:2.5rem;
+}
+
+.menu .box-container .box .content{
+    padding:2rem;
+    padding-top: 0;
+}
+
+.menu .box-container .box .content .stars{
+    padding-bottom: 1rem;
+}
+
+.menu .box-container .box .content .stars i{
+   font-size: 1.7rem;
+   color:var(--green);
+}
+
+.menu .box-container .box .content h3{
+    color:var(--black);
+    font-size: 2.5rem;
+}
+
+.menu .box-container .box .content p{
+    color:var(--light-color);
+    font-size: 1.6rem;
+    padding:.5rem 0;
+    line-height: 1.5;
+}
+
+.menu .box-container .box .content .price{
+    color:var(--green);
+    margin-left: 1rem;
+    font-size: 2.5rem;
+}
+
+.review .slide{
+    padding:2rem;
+    box-shadow:var(--box-shadow);
+    border:.1rem solid rgba(0,0,0,.2);
+    border-radius: .5rem;
+    position: relative;  
+    text-align: justify;  
+    overflow: auto;
+    height: 300px;
+}
+
+.review .slide .fa-quote-right{
+    position: absolute;
+    top:2rem; right:2rem;
+    font-size: 6rem;
+    color:#ccc;
+}
+
+.review .slide .user{
+    display: flex;
+    gap:1.5rem;
+    align-items: center;
+    padding-bottom: 1.5rem;
+}
+
+.review .slide .user img{
+    height: 7rem;
+    width: 7rem;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review .slide .user h3{
+    color:var(--black);
+    font-size: 2rem;
+    padding-bottom: .5rem;
+}
+
+.review .slide .user i{
+    font-size: 1.3rem;
+    color:var(--green);
+}
+
+.review .slide p{
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color:var(--light-color);
+}
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+}
+
+.order form{
+    max-width:90rem;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    border:.1rem solid rgba(0,0,0,.2);
+    background:#fff;
+    padding:1.5rem;
+    margin:0 auto;
+}
+
+.order form .inputBox{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.order form .inputBox .input{
+    width:49%;
+}
+
+.order form .inputBox .input span{
+    display:block;
+    padding:.5rem 0;
+    font-size: 1.5rem;
+    color:var(--light-color);
+}
+
+.order form .inputBox .input input,
+.order form .inputBox .input textarea{
+    background:#eee;
+    border-radius: .5rem;
+    padding:1rem;
+    font-size: 1.6rem;
+    color:var(--black);
+    text-transform: none;
+    margin-bottom: 1rem;
+    width:100%;
+}
+
+.order form .inputBox .input input:focus,
+.order form .inputBox .input textarea:focus{
+    border:.1rem solid var(--green);
+}
+
+.order form .inputBox .input textarea{
+    height:20rem;
+    resize: none;
+}
+
+.order form .btn{
+    margin-top: 0;
+}
+
+.loader-container{
+    position: fixed;
+    top:0; left:0;
+    height:100%; 
+    width:100%;
+    z-index: 10000;
+    background:#fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.loader-container img{
+    width:35rem;
+}
+
+.loader-container.fade-out{
+    top:-110%;
+    opacity:0;
+}
+
+
+
+
+/* ############################################################################################*/
+
+
+
+/* ===============================  F O O T E R  ==================================== */
+.footer_section{
+
+    margin: 0 auto;
+    font-size: 15px;
+    text-align: justify;
+}
+
+/* ===============================  FIRST = F O O T E R  ==================================== */
+
+.subscriber_head{
+
+    background-color: #1C1F34;
+    /* display: flex; */
+    display: grid;
+    text-align: center;
+    width: 100%;
+    height: 70px;
+    grid-template-columns: 1fr 1.5fr 0.5fr;
+    grid-template-areas: 
+    "head input subscribe";
+    /* align-items: center;
+    justify-content: center; */
+    /* display: flex; */
+    /* margin: auto; */
+    
+}
+
+.subscriber_search_box{
+
+    margin: auto;
+    display: flex;
+    width: 100%;
+    grid-area: input;
+}
+
+.subscriber_search_bar{
+
+    /* width: 450px; */
+    /* display: block; */
+    width: 100%;
+    max-width: 100%;
+    font-family: inherit;
+   
+    /* max-width: calc(100% - 50%); */
+    color: #435978;
+
+    font-weight: 500;
+    border-radius:50px 0px 0px 50px;
+    border: 0px;
+    padding: 15px 0px 15px 20px;
+  
+    font-size: 14px;
+    background: #F0F4EF;
+   
+   
+ 
+
+   
+  
+}
+
+.subscriber_head h1{
+    font-size: 1.5rem;
+    font-weight: lighter;
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+    font-family: sans-serif;
+    grid-area: head;
+    text-align: right;
+    margin-right: 10px;
+  
+}
+
+.subscriber_button{
+    border: 0px;
+    width: 150px;
+    max-height: 50px;
+    max-width: 100%;
+    font-size: 700;
+    padding: 15px;
+    font-size: 1rem;
+    color: white;
+    letter-spacing: 4px;
+    grid-area: subscribe;
+    font-family: sans-serif;
+    background: #2cb95b;
+    cursor: pointer;
+    margin-top: auto;
+    margin-bottom: auto;
+
+    font-weight: 500;
+    border-radius: 0px 50px 50px 0px;
+    outline: 0;
+    transition: all 0.2s;
+
+}
+
+/* ===============================  FIRST = F O O T E R = ENDS ==================================== */
+
+
+
+
+/* ===============================  MID = F O O T E R  ==================================== */
+.subscriber_mid{
+
+    background-color: #1C1F34;
+    width: 100%;
+    /* height: 180px; */
+    height: 200px;
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: 0.7fr 0.01fr 1.6fr 0.01fr 1fr;
+    grid-template-areas: 
+    "first line second line2 last";
+}
+
+
+.first_para{
+
+    margin-left: 10%;
+    margin-bottom: auto;
+    margin-top: auto;
+    grid-area: first;
+}
+
+#footer_first_head{
+    font-weight: lighter;
+}
+
+.vertical {
+    border-left: 1px solid white;
+    height: 156px;
+    grid-area: line;
+    margin-top: auto;
+    margin-bottom: auto;
+    /* position: absolute;
+    left: 21%;
+    bottom: -23%; */
+
+}
+
+.vertical2{
+    border-left: 1px solid white;
+    height: 156px;
+    grid-area: line2;
+    margin-top: auto;
+    margin-bottom: auto;
+    /* position: absolute;
+    left: 21%;
+    bottom: -23%; */
+
+}
+
+.middle_para{
+    grid-area: second;
+    display: flex;
+}
+
+.last_para{
+    grid-area: last;
+}
+
+.footer_About{
+    /* margin: auto; */
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+.footer_About_para{
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+.footer_About_head{
+
+    color: #5e68a6;
+}
+
+.footer_About_links{
+
+    font-weight: lighter;
+    color: WHITE;
+}
+
+
+
+
+
+
+
+
+
+
+
+.last_para{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.footer_form_mid{
+
+    margin-top: 3%;
+    display: flex;
+    width: 100%;
+}
+
+.footer_mid_subscribe_bar{
+
+  /* width: 450px; */
+    /* display: block; */
+    width: 100%;
+    max-width: 100%;
+    font-family: inherit;
+   
+    /* max-width: calc(100% - 50%); */
+    color: #435978;
+
+    font-weight: 500;
+    border-radius:50px 0px 0px 50px;
+    border: 0px;
+    padding: 15px 0px 15px 20px;
+  
+    font-size: 14px;
+    background: #F0F4EF;
+   
+
+
+}
+.footer_mid_subscriber_button{
+    border: 0px;
+    /* width: 150px; */
+    width: 100px;
+    max-width: 100%;
+    font-size: 700;
+    padding: 13px;
+    font-size: 1rem;
+    color: white;
+    letter-spacing: 1px;
+    grid-area: subscribe;
+    font-family: sans-serif;
+    background: #2cb95b;
+    cursor: pointer;
+    margin-top: auto;
+    margin-bottom: auto;
+    /* margin-left: 1%; */
+    margin-right: 2%;
+    font-weight: 500;
+    border-radius: 0px 50px 50px 0px;
+    outline: 0;
+    transition: all 0.2s;
+
+
+}
+
+.subscriber_button:hover{
+
+    background: rgb(0, 140, 255);
+
+
+}
+
+.footer_mid_subscriber_button:hover{
+
+    background: rgb(0, 140, 255);
+}
+
+.footer_mid_icons{
+    margin: 2%;
+    /* margin-left: 2%; */
+
+}
+
+.footer_mid_icons_inner:hover{
+
+    color: #006aff;
+}
+
+.quick_signup{
+    font-size: 1.4rem;
+    font-weight: lighter;
+}
+
+.footer_last{
+    margin-bottom: 4%;
+}
+
+
+.footer_mid_icons_inner{
+
+    font-size: 2rem;
+    color: white;
+    /* border: 1px solid blue; */
+}
+
+.icon_section{
+    /* you can either set it to flex or block */
+    display: block;
+
+    margin-left: 15%;
+}
+
+
+
+/* ====================================== MID = F O O T E R  ENDS ======================================= */
+
+
+
+
+
+/* ====================================== LAST = F O O T E R  STARTS ======================================= */
+.subscriber_last{
+    background-color: #1C1F34;
+    height: 70px;
+    width: 100%;
+    display: grid;
+    grid-gap: 25px;
+    grid-template-columns: 2fr 0.01fr 3fr 1fr;
+    grid-template-areas: 
+    "logo line3 mid-section copyright";
+     
+}
+
+
+.footer_logo_last{
+ 
+    text-align: end;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.vertical3{
+    border-left: 1px solid WHITE;
+    height: 15px;
+    grid-area: line3;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.footer_last_mid_para{
+
+margin-top: auto;
+margin-bottom: auto;
+
+}
+
+#unleash{
+
+    color: white;
+    font-weight: lighter;
+
+}
+
+.copyright2{
+
+    color: white;
+    font-size: 0.7rem;
+    font-weight: lighter;
+}
+
+.footer_last_last_para{
+
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+}
+
+.zoom-img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    border: 2px solid #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+.footerbottom{
+    margin-bottom: 10px;
+}
+
+
+
+/* ====================================== LAST = F O O T E R  ENDS ======================================= */
+
+/* -----------------------------MEDIA QUERIES----------------------------- */
+@media (max-width: 768px) {
+    #search-icon {
+     display: none;
+   }
+   #signup{
+    display: none;
+   }
+}
+@media only screen and (max-width: 992px) {
+
+    .subscriber_head{
+    
+        grid-template-columns: 0.5fr 2.5fr 0.5fr;
+    }
+    #free_daily_updates{
+        display: none;
+    }
+
+    .quick_signup{
+    display: none;
+
+    }
+    
+    
+    
+    
+}
+@media screen and (max-width: 768px) {
+    .text-container h3 {
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  }
+  
+  form {
+    flex-basis: calc(50% - 10px);
+    max-width: 100%;
+    padding: 10px;
+  }
+  
+  iframe {
+    width: 100%;
+    height: 470px;
+    margin-bottom: 40px;
+  }
+  
+  .h1heading {
+    padding-top: 10px;
+  }
+
+@media only screen and (max-width: 300px) {
+    .text {
+      font-size: 11px;
+    }
+  }
+  .footerbottom{
+      text-align: center;
+      gap: 1rem;
+  }
+  .footer_logo{
+      text-align: center;
+  }
+  /* Add this CSS to your stylesheet or within a <style> tag in your HTML document */
+
+/* Adjust the layout for smaller screens */
+@media (max-width: 200px) {
+    .row {
+        flex-direction: column; /* Stack elements vertically */
+    }
+
+    .image1 {
+        margin-bottom: 20px; /* Add space between image and content */
+    }
+
+    .content {
+        text-align: center; /* Center-align content on smaller screens */
+    }
+
+    .icons-container {
+        display: flex;
+        justify-content: space-around; /* Center icons horizontally */
+    }
+
+    .icons {
+        text-align: center; /* Center-align each icon */
+        margin: 10px; /* Add space between icons */
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .subscriber_head{
+    
+        grid-template-columns: 0.1fr 1fr 0.1fr;
+    }
+
+    .subscriber_mid{
+        grid-template-columns:1fr;
+        /* grid-template-rows: 1.2fr 0.01fr 1fr 0.01fr 1fr; */
+        grid-template-rows: 0.9fr 0.01fr 0.9fr 0.01fr 0.9fr;
+        grid-template-areas:
+        "first"
+        "horizontal"
+        "second"
+        "horizontal2"
+        "last";
+        height: 100%;
+        grid-gap: 0px;
+    }
+
+
+
+    .first_para{
+        margin-left: 3%;
+    }
+
+    .middle_para{
+        flex-wrap: wrap;
+    }
+    
+    .last_para{
+        text-align: center;
+    }
+    
+    .footer_mid_subscriber_button{
+        margin-right: 0;
+    }
+
+    .vertical{
+        display: none;
+    }
+
+
+    .vertical2{
+        display: none;
+        
+    }
+
+    .vertical3{
+        display: none;
+    }
+
+    .horizontal{
+        border-bottom: 1px solid #0000004d;
+        grid-area: horizontal;
+    }
+    
+    .horizontal2{
+        border-bottom: 1px solid #0000004d;
+        grid-area: horizontal2;
+
+        
+    }
+
+    .contacts h4{
+        text-align: left;
+        margin-left: 2%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    .contacts{
+
+        margin-top: 3%;
+        margin-bottom: 3%;
+    }
+
+    .icon_section{
+        margin-left: 0%;
+        justify-content: center;
+    }
+
+    .footer_mid_icons_inner{
+        font-size: 3rem;
+    }
+
+    .subscriber_last{
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 1%;
+    }
+
+    .footer_logo_last{
+        text-align: center;
+    }
+
+    .footer_last_mid_para{
+        text-align: center;
+    }
+
+    .footer_last_last_para{
+        text-align: center;
+    }
+
+    .footer_last{
+        margin: 0;
+    }
+
+
+    /* ===============================  FIRST = F O O T E R  ==================================== */
+
+/* Increase the font size for the heading */
+.subscriber_head h1 {
+    font-size: 1.8rem;
+}
+
+/* Increase the font size for the search bar and button */
+.subscriber_search_bar {
+    font-size: 1.2rem;
+    padding: 12px 0px 12px 16px;
+}
+
+.subscriber_button {
+    font-size: 1.2rem;
+    padding: 12px;
+}
+
+/* ===============================  MID = F O O T E R  ==================================== */
+
+/* Increase font sizes for various headings and links */
+.footer_About_head {
+    font-size: 1.4rem;
+}
+
+.footer_About_links {
+    font-size: 1.3rem;
+}
+
+#footer_first_head {
+    font-size: 1.5rem;
+}
+
+.footer_para h5 {
+    font-size: 1.4rem;
+}
+
+.quick_signup {
+    font-size: 1.6rem;
+}
+
+/* Increase font size for social media icons */
+.footer_mid_icons_inner {
+    font-size: 2.2rem;
+}
+
+/* ===============================  LAST = F O O T E R  STARTS ==================================== */
+
+/* Increase font size for the "Unleash" text */
+#unleash {
+    font-size: 1.6rem;
+}
+
+/* Increase font size for copyright text */
+.copyright2 {
+    font-size: 0.9rem;
+}
+
+/* -----------------------------MEDIA QUERIES----------------------------- */
+
+@media only screen and (max-width: 992px) {
+    /* Modify styles as needed for medium-sized fonts */
+
+}
+
+@media only screen and (max-width: 768px) {
+    /* Modify styles as needed for medium-sized fonts */
+
+}
+
+@media only screen and (max-width: 576px) {
+    /* Modify styles as needed for medium-sized fonts */
+
+}
+
+@media only screen and (max-width: 502px) {
+    /* Modify styles as needed for medium-sized fonts */
+}
+
+}
+
+
+
+@media only screen and (max-width: 576px) {
+
+    .subscriber_head{
+    
+        grid-template-columns: 0.1fr 1fr 0.1fr;
+    }
+
+    .subscriber_mid{
+        grid-template-columns:1fr;
+        /* grid-template-rows: 1.2fr 0.01fr 1fr 0.01fr 1fr; */
+        grid-template-rows: 0.5fr 0.01fr 0.5fr 0.01fr 0.5fr;
+        grid-template-areas:
+        "first"
+        "horizontal"
+        "second"
+        "horizontal2"
+        "last";
+        height: 100%;
+        grid-gap: 0px;
+    }
+
+
+    .horizontal{
+        border-bottom: 1px solid #0000004d; 
+        grid-area: horizontal;
+
+   
+    }
+    
+    .horizontal2{
+       border-bottom: 1px solid #0000004d;       
+       grid-area: horizontal2;
+
+    }
+
+
+    .middle_para{
+        text-align: left;
+    }
+
+    .footer_About{
+
+
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: 8.4%;
+        margin-right: 8.4%;
+    }
+
+    .footer_About_head{
+
+        font-size: 1.4rem;
+    }
+
+    .footer_About_links{
+
+        font-size: 1.6rem;  
+    }
+
+
+    #footer_first_head{
+
+        font-size: 2rem;
+    }
+
+
+    .footer_para h5{
+
+        font-size: 1.2rem;
+    }
+
+
+
+
+
+}
+
+
+@media only screen and (max-width: 502px) {
+
+
+
+ .subscriber_mid{
+
+    grid-template-rows: 0.9fr 0.01fr 2.5fr 0.01fr 0.3fr;
+ }
+
+
+
+
+}
+
+@media (max-width: 768px) {
+    header .icons #menu-bars {
+        display: inline-block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        border-top: .1rem solid rgba(0, 0, 0, .2);
+        border-bottom: .1rem solid rgba(0, 0, 0, .2);
+        padding: 1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a {
+        display: block;
+        padding: 1.5rem;
+        margin: 1rem;
+        font-size: 2rem;
+        background: #eee;
+    }
+.home .home-slider .slide .image1{
+    flex:1 1 45rem;
+    width: 120%;
+    height: 50%;
+    margin-left: -40px;
+    object-fit: cover;
+}
+
+}
+
+@media (max-width: 300px) {
+    html {
+        font-size: 50%;
+    }
+
+    .dishes .box-container .box img {
+        height: auto;
+        width: 100%;
+    }
+
+    .order form .inputBox .input {
+        width: 100%;
+    }
+}
+/* Add responsive CSS to adjust the section for different screen sizes */
+
+/* For small screens, stack the image and content vertically */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center content horizontally */
+    }
+
+    .image1 {
+        margin-bottom: 2rem; /* Add space between the image and content */
+    }
+
+    .content {
+        text-align: center; /* Center-align the content */
+    }
+}
+
+/* For medium and larger screens, use the original styles */
+@media (min-width: 769px) {
+    /* You can define styles for medium screens here */
+}
+
+/* For larger screens (adjust width to your needs) */
+@media (min-width: 1025px) {
+    /* You can define styles for larger screens here */
+}
+/* Add responsive CSS to adjust the section for different screen sizes */
+
+/* For small screens, stack the images vertically */
+@media (max-width: 768px) {
+    .album {
+        flex-direction: column; /* Stack images vertically */
+        height: auto; /* Adjust height as needed */
+    }
+
+    .album > div {
+        flex: auto; /* Allow images to take the available width */
+        height: 20rem; /* Adjust height as needed */
+    }
+}
+
+/* For medium screens, show images in a row with reduced spacing */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .album {
+        flex-direction: row; /* Show images in a row */
+        height: 30rem; /* Adjust height as needed */
+    }
+
+    .album > div {
+        flex: 1; /* Equal width for images */
+        height: 100%; /* Keep the same height as defined */
+        margin: 1rem; /* Add spacing between images */
+    }
+}
+
+/* For large screens, use the original styles */
+@media (min-width: 1025px) {
+    .album {
+        flex-direction: row; /* Show images in a row */
+        height: 50rem; /* Adjust height as needed */
+    }
+
+    .album > div {
+        flex: 1; /* Equal width for images */
+        height: 100%; /* Keep the same height as defined */
+        margin: 1rem; /* Add spacing between images */
+    }
+}
+
+/* Adjust the slider container styles for different screen sizes */
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the arrows */
+}
+
+.slider-arrow {
+    cursor: pointer;
+    font-size: 4rem;
+    margin: 0 2rem; /* Add margin between arrows */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries  */
+
+@media (max-width:991px){
+
+    html{
+        font-size: 55%;
+    }
+    
+    header{
+        padding:1rem 2rem;
+    }
+
+    section{
+        padding:2rem;
+    }
+
+
+}
+/* Add this CSS to your stylesheet or within a <style> tag in your HTML document */
+
+/* Adjust the layout for smaller screens */
+@media (max-width: 768px) {
+    .sub-heading {
+        font-size: 24px; /* Decrease font size for sub-heading */
+    }
+
+    .heading {
+        font-size: 32px; /* Decrease font size for heading */
+    }
+
+    .review-slider {
+        padding: 20px; /* Add some spacing around the slider */
+    }
+
+    .slide {
+        padding: 20px; /* Add padding to each slide */
+    }
+
+    .user {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .user-info {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .stars {
+        text-align: center;
+    }
+    
+    .user h3 {
+        font-size: 18px; /* Decrease font size for user info */
+    }
+
+    .user img {
+        max-width: 100%; /* Make user images responsive */
+    }
+
+    .slide p {
+        font-size: 14px; /* Decrease font size for paragraph */
+    }
+}
+
+/* Add this CSS within your <style> or in an external stylesheet */
+@media screen and (max-width: 768px) {
+    .swiper-container {
+      width: 100%; /* Set the width to 100% for smaller screens */
+    }
+    
+    .swiper-slide {
+      /* Adjust slide styles for smaller screens if needed */
+    }
+    
+    .user-info h3 {
+      font-size: 16px; /* Adjust font size for smaller screens if needed */
+    }
+  }
+  
+@media (max-width:500px){
+
+    header .icons #menu-bars{
+        display: inline-block;
+    }
+
+    header .navbar{
+        position: absolute;
+        top:100%; left:0; right:0;
+        background:#fff;
+        border-top: .1rem solid rgba(0,0,0,.2);
+        border-bottom: .1rem solid rgba(0,0,0,.2);
+        padding:1rem;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header .navbar.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a{
+        display: block;
+        padding:1.5rem;
+        margin:1rem;
+        font-size: 2rem;
+        background:#eee;
+    }
+
+    #search-form #search-box{
+        width:90%;
+        margin:0 1rem;
+    }
+
+    .home .home-slider .slide .content h3{
+        font-size: 5rem;
+    }
+
+}
+
+@media (max-width:450px){
+
+    html{
+        font-size: 50%;
+    }
+
+    .dishes .box-container .box img{
+        height:auto;
+        width: 100%;
+    }
+
+    .order form .inputBox .input{
+        width:100%;
+    }
+
+}
+

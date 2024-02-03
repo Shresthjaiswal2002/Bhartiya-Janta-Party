@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bhartiya Janta Party</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    
+<!-- header section starts      -->
+
+<header>
+
+    <a href="index.html" class="logo"><img src="images/logo_1_0.png">
+
+    <nav class="navbar">
+        <a class="active" href="index.html">home</a>
+        <a href="about.html">about</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="ourjourney.html">Our Journey</a>
+        <a href="contact2.html">Contact Us</a>
+    </nav>
+
+    <div class="icons">
+        <i class="fas fa-bars" id="menu-bars"></i>
+        <i class="fas fa-search" id="search-icon"></i>
+        <a href='signlog.html' class="fas fa-user-circle" id="signup"></a>
+    </div>
+
+</header>
+
+<!-- header section ends-->
+
+<!-- search form  -->
+
+<form action="" id="search-form">
+    <input type="search" placeholder="search here..." name="" id="search-box">
+    <label for="search-box" class="fas fa-search"></label>
+    <i class="fas fa-times" id="close"></i>
+</form>
+
+<!-- home section starts  -->
+
+<section class="home" id="home" style="object-fit: cover;">
+
+    <div class="swiper-container home-slider">
+
+        <div class="swiper-wrapper wrapper">
+
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <div class="image1">
+                        <img src="images/Membership-Drive-Banner-02-10-2023.jpeg" alt="" >
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <div class="image1">
+                        <img src="images/Unioun_budget_2023_2.avif" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <div class="image1">
+                        <img src="images/Englisg-leaders_1.avif" alt="" >
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <div class="image1">
+                        <img src="images/donation.jpeg" alt= "" >
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide slide">
+                <div class="content">
+                    <div class="image1">
+                        <img src="images/banner-main-atalji-e_1_0.avif" alt="" >
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- dishes section starts  -->
+
+<section class="dishes" id="dishes">
+
+    <h1 class="heading">Our Leaders</h1>
+
+    <div class="album">
+        <div style="background-image: url('images/Amit-Shah.jpg');"></div>
+        <div style="background-image: url('https://www.equitypandit.com/wp-content/uploads/2022/10/PM-Modi-Releases-12th-Installment-of-Rs-16000-Cr-to-Eligible-Farmers-Under-PM-KISAN-Scheme-EP.jpg');"></div>
+        <div style="background-image: url('images/whatsapp-image-2020-07-24-at-5.50.02-pm.avif');"></div>
+        <div style="background-image: url('https://www.livelaw.in/h-upload/2021/05/25/750x450_393984-smriti-irani.jpg');"></div>
+        <div style="background-image: url('images/rajnath-singh-5_0.avif');"></div>
+    </div>
+
+    <!-- <div class="slider-container">
+        <span class="slider-arrow" id="prev">&#9664;</span>
+        <span class="slider-arrow" id="next">&#9654;</span>
+    </div> -->
+
+    <script>
+        const album = document.querySelector('.album');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        let currentIndex = 0;
+
+        function updateSlider() {
+            album.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateSlider();
+            }
+        });
+
+        nextButton.addEventListener('click', () => {
+            if (currentIndex < 4) {
+                currentIndex++;
+                updateSlider();
+            }
+        });
+        setInterval(nextSlide, 1000); // Change slides every 3 seconds
+
+prevButton.addEventListener('click', prevSlide);
+nextButton.addEventListener('click', nextSlide);
+    </script>
+      <style>
+        .album {
+            display: flex;
+            overflow: hidden;
+            height: 50rem;
+        }
+
+        .album > div {
+            flex: 1;
+            border-radius: 1rem;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: auto 100%;
+            transition: all 0.8s cubic-bezier(.25, .4, .45, 1.4);
+        }
+
+        .album > div:hover {
+            flex: 5;
+        }
+
+        .slider-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .slider-arrow {
+            cursor: pointer;
+            font-size: 4rem;
+
+            justify-content: center;
+            text-align: center;
+        }
+        #prev{
+            margin-right: 40rem;
+        }
+        #next{
+            margin-left: 82rem;
+        }
+    </style>
+    </section>
+<!-- dishes section ends -->
+
+<!-- about section starts  -->
+
+<section class="about" id="about">
+
+    <h1 class="heading">About Us</h1>
+
+    <div class="row">
+
+        <div class="image">
+            <img src="images/Bharatiya_Janata_Party_logo.svg.png" alt="">
+        </div>
+
+        <div class="content">
+            <h3>Since 2014, it has been the ruling political party in India under the incumbent Prime Minister Narendra Modi.</h3>
+            <p>The party's origins lie in the Bharatiya Jana Sangh, which was founded in 1951 by Indian politician Shyama Prasad Mukherjee.[42] After the Emergency of 1975–1977, the Jana Sangh merged with several other political parties to form the Janata Party; it defeated the then-incumbent Indian National Congress in the 1977 general election. After three years in power, the Janata Party dissolved in 1980, with the members of the erstwhile Jana Sangh reconvening to form the modern-day BJP. Although initially unsuccessful—winning only two seats in the 1984 general election, it grew in strength on the back of the movement around Ram Janmabhoomi in Uttar Pradesh. Following victories in several state elections and better performances in national elections, the BJP became the largest political party in the Parliament in 1996; however, it lacked a majority in the lower house of Parliament, and its government, under its then-leader Atal Bihari Vajpayee, lasted for only 13 days.[43]</p>
+            <div class="icons-container">
+                <div class="icons">
+                    <i class="fas fa-shipping-fast"></i>
+                    <span>Growing Party</span>
+                </div>
+                <div class="icons">
+                    <i class="fas fa-headset"></i>
+                    <span>24/7 service</span>
+                </div>
+            </div>
+            <a href="#" class="btn">learn more</a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- about section ends -->
+
+<!-- menu section starts  -->
+
+<section class="menu" id="menu">
+
+    <h3 class="sub-heading"> <br>Gallery </h3>
+    <h1 class="heading"> Parliamentary Board </h1>
+
+    <div class="box-container">
+
+        
+
+        <div class="box">
+            <div class="image">
+
+                <img src="images/jp-nadda_0.avif" alt="">
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <h3>Shri Jagat Prakash Nadda</h3>
+                </div>
+                <h3 style="color: #F58221;">BJP National President</h3>
+                <p> 7-B, Motilal Nehru Marg, New Delhi.</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/Shri Narendra Modi_0.avif" alt="">
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="content">
+                <div class="stars">
+                 <h3>Shri Narendra Modi</h3>
+                </div>
+                <h3 style="color: #F58221;">Prime Minister of India</h3>
+                <p> 7 Lok Kalyan Marg, New Delhi, Delhi</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/rajnath-singh-5_0.avif" alt="">
+                <a href="#" class="fas fa-eye"></a>
+                
+            </div>
+            <div class="content">
+                <div class="stars">
+                   <h3>Shri Rajnath Singh</h3>
+                </div>
+                <h3 style="color: #F58221;">Cabinet Minister, Govt. Of India</h3>
+                <p> 17, Akbar Road, New Delhi, Delhi</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/amitshah (1).avif" alt="">
+                <a href="#" class="fas fa-eye"></a>
+               
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <h3>Shri Amit Shah</h3>
+                </div>
+                <h3 style="color: #F58221;">Cabinet Minister, Govt. Of India</h3>
+                <p> BJP Central Office 6 - A Deendayal Upadhyaya Marg, New Delhi, Delhi - 110002</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/b.s.yeddyurappa-cm_0.avif" alt="">
+                <a href="#" class="fas fa-eye"></a>
+                
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <h3>Shri B. S. Yediyurappa</h3>
+                </div>
+                <h3 style="color: #F58221;">Ex-CM, Karnataka</h3>
+                <p> Jagannatha Bhawan #48, Temple Street, 11th Cross, Malleshwaram, Bengaluru, Karnataka - 560003</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/shri-sarbananda-sonowal-2_0.avif" alt="">
+                <a href="#" class="fas fa-eye"></a>
+                
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <h3>Shri Sarbananda Sonowal</h3>
+                </div>
+                <h3 style="color: #F58221;">Union Minister</h3>
+                <p> 23, Safdarjung Road, New Delhi-110003</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/Dr-K-Laxman_2.avif" alt="">
+                <a href="#" class="fas fa-eye"></a>
+                
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <h3>Dr. K. Laxman</h3>
+                </div>
+                <h3 style="color: #F58221;">National President - OBC Morcha</h3>
+                <p> 302 Swarnana Jayanti Deluxe, Dr. BD Marg, New Delhi</p>
+            </div>
+        </div>
+
+        <div class="box">
+            <div class="image">
+                <img src="images/Iqbal-Singh-lalpura-2020.avif" alt="">
+                <a href="#" class="fas fa-eye"></a>
+              
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <h3>Shri Iqbal Singh Lalpura</h3>
+                </div>
+                <h3 style="color: #F58221;">Parliamentary Board Member</h3>
+                <p> 95 Lodhi Estate New Delhi 110003</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="images/Dr. Sudha Yadav.avif" alt="">
+                <a href="#" class="fas fa-eye"></a>
+              
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <h3>Dr. Sudha Yadav</h3>
+                </div>
+                <h3 style="color: #F58221;">Parliamentary Board Member</h3>
+                <p> House Number 258, Sector 10 A, Gurugram</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="images/Dr. Satyanarayan Jatiya.avif" alt="">
+                <a href="#" class="fas fa-eye"></a>
+              
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <h3>Dr. Satyanarayan Jatiya</h3>
+                </div>
+                <h3 style="color: #F58221;">Parliamentary Board Member</h3>
+                <p> 99 North Avenue ,New Delhi 110001</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image">
+                <img src="images/b-l-santosh-new-2019-dc-v2_2.avif" alt="">
+                <a href="#" class="fas fa-eye"></a>
+              
+            </div>
+            <div class="content">
+                <div class="stars">
+                    <h3>Shri B.L. Santhosh</h3>
+                </div>
+                <h3 style="color: #F58221;">National General Secretary (Org)</h3>
+                <p> BJP Central Office, 6 - A Deendayal Upadhyaya Marg, New Delhi - 110002</p>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- menu section ends -->
+
+<!-- review section starts  -->
+
+<section class="review" id="review">
+    
+
+    <h3 class="sub-heading"> Our Inspiration </h3>
+    <h1 class="heading"> Our Journey </h1>
+
+    <div class="swiper-container review-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide slide">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="images/399697-shyama-prasad-mukherjee.jpg" alt="">
+                    <div class="user-info">
+                        <h3>Dr.Syama Prasad <br>Mookerjee<br>(Founder of the Bharatiya Jana Sangh )                        </h3><br>
+                    </div>
+                </div>
+                <p>Birth of Jana Sangh: On 21 October 1951, Bharatiya Jana Sangh is formed in Raghomal Girls High School, Delhi with Dr. Syama Prasad Mookerjee as its first President.
+
+                </p>
+            </div>
+
+            <div class="swiper-slide slide">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="images/399697-shyama-prasad-mukherjee.jpg" alt="">
+                    <div class="user-info">
+                        <h3>Our Journey (1953)</h3>
+                        <div class="stars">
+                            
+                        </div>
+                    </div>
+                </div>
+                <p>Kashmir Agitation: Bharatiya Jana Sangh starts a movement under the leadership of Dr. Syama Prasad Mookerjee on the issue of Kashmir and national integration and opposes the grant of any special status to Kashmir. The dictatorial approach of Nehru witnesses the arrest of Dr. Syama Prasad Mookerjee who is jailed in Kashmir where he dies under mysterious circumstances.</p>
+            </div>
+
+            <div class="swiper-slide slide">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="images/399697-shyama-prasad-mukherjee.jpg" alt="">
+                    <div class="user-info">
+                        <h3>Our Journey(1954)</h3>
+                        <div class="stars">
+            
+                        </div>
+                    </div>
+                </div>
+                <p>Goa Liberation Movement: On 2 May 1954, Integration Day is organized throughout the country and Goa Liberation Week is organized from 6 December 1954 to 16 December 1954.
+
+                </p>
+            </div>
+
+            <div class="swiper-slide slide">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="images/banner-main-atalji-e_1_0.avif" alt="">
+                    <div class="user-info">
+                        <h3>Our Journey(2004)</h3>
+                        <div class="stars">
+                        
+                        </div>
+                    </div>
+                </div>
+                <p>General Elections: Shri Atal Bihari Vajpayee calls for elections, six months ahead of schedule. The NDA's campaign is based on the slogan "India Shining". However, it falls short of the majority mark, winning 186 seats in the Lok Sabha, compared to the 222 of the Congress led alliance.
+
+                </p>
+            </div>
+            <div class="swiper-slide slide">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="images/banner-main-atalji-e_1_0.avif" alt="">
+                    <div class="user-info">
+                        <h3>Our Journey(2008)</h3>
+                        <div class="stars">
+                        </div>
+                    </div>
+                </div>
+                <p>Karnataka assembly elections: In May, BJP wins the state elections in Karnataka. This is the first time that the party has won assembly elections, gaining ground in any South Indian state.
+
+
+
+                </p>
+            </div>
+            <div class="swiper-slide slide">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="images/banner-main-atalji-e_1_0.avif" alt="">
+                    <div class="user-info">
+                        <h3>Our Journey(2009)</h3>
+                        <div class="stars">
+                        </div>
+                    </div>
+                </div>
+                <p>General Elections: BJP’s strength in the Lok Sabha falls to 116 seats.
+
+
+
+
+
+                </p>
+            </div>
+            <div class="swiper-slide slide">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="images/Shri Narendra Modi_0.avif" alt="">
+                    <div class="user-info">
+                        <h3>Our Journey(2014)</h3>
+                        <div class="stars">
+                        </div>
+                    </div>
+                </div>
+                <p>General Elections: BJP wins 282 seats under the leadership of Shri Narendra Modi, leading the NDA to a tally of 336 seats in the 543-seat Lok Sabha. The BJP parliamentary leader Shri Narendra Modi is sworn in as the 15th Prime Minister of India on 26 May 2014.
+
+                    The vote share of the BJP is 31% and 38% along with its allies of all votes cast. This is the first time, since its inception, that the party has achieved full majority in the Indian Parliament and the first time that it has achieved a majority in the Lok Sabha on its own strength.
+                    
+                    
+
+
+
+
+
+                </p>
+            </div>
+            <div class="swiper-slide slide">
+                <i class="fas fa-quote-right"></i>
+                <div class="user">
+                    <img src="images/Shri Narendra Modi_0.avif" alt="">
+                    <div class="user-info">
+                        <h3>Our Journey(2019)</h3>
+                        <div class="stars">
+                        </div>
+                    </div>
+                </div>
+                <p>General Elections: BJP scripts history by winning 303 Lok Sabha seats on its own.
+
+                    With this astounding victory, people of India repose their faith in the legendary leadership of Shri Narendra Modi to turn their hopes and aspirations into development and prosperity. The mantra of ‘Sabka Saath Sabka Vikas Sabka Vishwas’ has become an epitome in building a New India.
+                    
+
+
+
+
+
+                </p>
+            </div>
+
+
+
+        </div>
+
+    </div>
+    
+</section>
+
+<!-- review section ends -->
+
+<!-- order section starts  -->
+
+<!-- order section ends -->
+
+<!-- footer section starts  -->
+
+<div class="footer_section">
+    <!--======================================= FOOTER TOP SECTION START =========================== -->
+            <div class="subscriber_head">
+    
+                <h1 id="free_daily_updates">Free Daily Updates</h1>
+    
+                
+                <form action="" class="subscriber_search_box" method="get"  >
+                    
+                    <input class="subscriber_search_bar" type="text" placeholder="Enter Your Email ID or Mobile Number ">
+    
+               
+                    <button class="subscriber_button" type="submit" >Subscribe</button>
+            </form>
+    
+            </div>
+    
+            
+    <!--======================================= FOOTER TOP SECTION ENDS =========================== -->
+    
+    <!--======================================= FOOTER MID SECTION START =========================== -->
+    
+            <div class="subscriber_mid">
+            <div class="first_para">
+                        <div class="footer_para">
+                            <div class="footer_logo"><img src="images/logo_1_0.png"width="300px" style="margin-bottom: 100px;"></div>
+                            <h3 class="footerbottom"   id="footer_logo" style="color: white; margin-top: -100px;">GALLERY</h3>
+                   
+                            <h3 class="footerbottom" style="color: white;">contact us</h3>
+                            <h3 class="footerbottom" style="color: white;">About us</h3>
+                            <h3  class="footerbottom"style="color: white;">OurJourney</h3>
+                            <h3 class="footerbottom" style="color: white;">Search</h3>
+                       
+                        </div>
+    
+                   
+                    </div>
+              
+                    
+                 
+                    <div class = "vertical2"></div>   <div class = "horizontal"></div> 
+                    <div class="middle_para">
+                    
+                        <div class="footer_About">
+                            <h4 class="footer_About_para"><a class="footer_About_head" href="#" style="color: #F58221; font-size: 17px;">The Party</a></h5>
+                            <h4 class="footer_About_para"><a class="footer_About_head" href="#">About  The Party</a></h5>
+                            <h5 class="footer_About_para"><a class="footer_About_links" href="">Our Philossphy</a></h5>
+                            <h5 class="footer_About_para"><a class="footer_About_links" href="">Intergral Humanism</a></h5>
+                            <h5 class="footer_About_para"><a class="footer_About_links" href="">History Of Party</a></h5>
+                            <h5 class="footer_About_para"><a class="footer_About_links" href="">History And Development</a></h5>
+    
+    
+                        </div>
+    
+                        <div class="footer_About">
+                            <h4 class="footer_About_para"><a class="footer_About_head" href="#" style="color: #F58221; font-size: 17px;">Morcha</a></h5>
+        
+                                <h5 class="footer_About_para"><a class="footer_About_links" href="">Kisan Morcha</a></h5>
+                                <h5 class="footer_About_para"><a class="footer_About_links" href="">Mahila Morcha</a></h5>
+                                <h5 class="footer_About_para"><a class="footer_About_links" href="">S.C. Morcha</a></h5>
+                                <h5 class="footer_About_para"><a class="footer_About_links" href="">Yuva Morcha</a></h5>
+                                <h5 class="footer_About_para"><a class="footer_About_links" href="">S.T. Morcha</a></h5>
+                                <h5 class="footer_About_para"><a class="footer_About_links" href="">O.B.C Morcha</a></h5>
+                        </div>
+    
+                        <div class="footer_About">
+                            <h4 class="footer_About_para"><a class="footer_About_head" href="#" style="color: #F58221; font-size: 17px;">Media Resources</a></h5>
+                            <h5 class="footer_About_para"><a class="footer_About_links" href="">Press Release</a></h5>
+                            <h5 class="footer_About_para"><a class="footer_About_links" href="">Speeches</a></h5>
+                            <h5 class="footer_About_para"><a class="footer_About_links" href="">Interviews And Article</a></h5>
+                            <h5 class="footer_About_para"><a class="footer_About_links" href="">Photo Gallery</a></h5>
+                            <h5 class="footer_About_para"><a class="footer_About_links" href="">Video Gallery</a></h5>
+    
+    
+    
+                        </div>
+    
+                        <div class="footer_About">
+                            <h4 class="footer_About_para"><a class="footer_About_head" href="#" style="color: #F58221; font-size: 17px;">Organisation</a></h5>
+                                <h5 class="footer_About_para"><a class="footer_About_links" href="">Margdharshak Mandal</a></h5>
+                                <h5 class="footer_About_para"><a class="footer_About_links" href="">Parliamentary Board</a></h5>
+                                <h5 class="footer_About_para"><a class="footer_About_links" href="">Departments</a></h5>
+                                <h5 class="footer_About_para"><a class="footer_About_links" href="">Sanghatak</a></h5>
+                                <h5 class="footer_About_para"><a class="footer_About_links" href="">State President</a></h5>
+                        </div>
+    
+    
+                    </div>
+    
+                    
+    
+                    
+                    <div class = "vertical"></div><div class = "horizontal2"></div> 
+    
+                <div class="last_para">
+    
+                    <div class="footer_last">
+                        <p class="quick_signup" style="color: #5e68a6;">Quick Signup</p>
+                        <h5 id="free_daily_updates" style="color: wheat;">This 3 Minute Will Take Your Newslatter To Harry Potter House So Dont Forget To Subscribe</h5>
+                        <form action="" class="footer_form_mid" method="get"  >
+                    
+
+                    </form>
+                    </div>
+    
+                    <div class="contacts">
+                        <h4 style="color: WHITE; margin-left: 120px;">Connect:
+                      
+                        </h4><br>
+                        <div class="icon_section">
+                        <a class="footer_mid_icons" href=""><i class="fab fa-twitter footer_mid_icons_inner"></i></a>
+                        <a class="footer_mid_icons" href=""><i class="fab fa-instagram footer_mid_icons_inner"></i></a>
+                        <a class="footer_mid_icons" href=""><i class="fab fa-linkedin footer_mid_icons_inner"></i></a>
+                        <a class="footer_mid_icons" href=""><i class="fab fa-youtube footer_mid_icons_inner"></i></a>
+                        <a class="footer_mid_icons" href=""><i class="fab fa-twitter footer_mid_icons_inner"></i></a>
+                    </div>
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+    <!--======================================= FOOTER MID SECTION ENDS =========================== -->
+    
+    <!--======================================= FOOTER LAST SECTION START =========================== -->
+        <div class="subscriber_last">
+    
+    
+    
+            <div class="footer_logo_last"></div>
+            <div class = "vertical3"></div>
+            <div class = "footer_last_last_para">
+                <p class="copyright2">COPYRIGHT 2022 &copy; All right reserved</p>
+                <p class="copyright2">ALL Trademark are registered to their respective owners bros</p>
+            </div>
+    
+        </div>
+
+    
+    </div>
+
+<!-- footer section ends -->
+
+<!-- loader part  -->
+<div class="loader-container">
+    <img src="images/Untitled design.gif" alt="">
+</div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="script.js"></script>
+<!-- Zoom-in overlay -->
+<div class="overlay">
+    <img src="" alt="Zoomed Image" class="zoom-img">
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="script.js"></script>
+
+</body>
+</html>
